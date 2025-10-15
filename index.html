@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danilo Turques | Arquiteto de Fluxos Digitais</title>
-    <meta name="description" content="Transformo ideias em experiências digitais fluidas e intuitivas, combinando design estratégico com tecnologia de ponta.">
+    <title>Danilo Turques | Analista de Suporte de TI & Redes</title>
+    <meta name="description" content="Profissional de TI especializado em suporte técnico, infraestrutura e redes, focado em garantir a estabilidade e eficiência de ambientes tecnológicos.">
     <meta name="author" content="Danilo Turques de Almeida">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📡</text></svg>">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -41,6 +41,16 @@
         body { background-color: #0f172a; color: #f8fafc; overflow-x: hidden; height: 100%; position: relative; }
         .vanta-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
         .text-gradient { background: linear-gradient(135deg, #0ea5e9 0%, #cc8533 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .wave-text {
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: wave-animation 4s linear infinite;
+            background-image: linear-gradient(to right, #0ea5e9, #cc8533, #0ea5e9, #cc8533);
+        }
+        @keyframes wave-animation { to { background-position: 200% center; } }
         .card-hover { transition: all 0.3s ease; }
         .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
         .mobile-menu { transition: transform 0.3s ease-in-out; }
@@ -49,9 +59,6 @@
         .swiper-pagination-bullet-active { opacity: 1; }
         .tech-icon { transition: all 0.3s ease; }
         .tech-icon:hover { transform: scale(1.1); filter: drop-shadow(0 0 8px rgba(14, 165, 233, 0.7)); }
-        .project-card { position: relative; overflow: hidden; border-radius: 12px; }
-        .project-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.2) 100%); opacity: 0; transition: opacity 0.4s ease; display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; }
-        .project-card:hover .project-overlay { opacity: 1; }
         .form-input { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 12px 16px; color: white; transition: all 0.3s ease; }
         .form-input:focus { outline: none; border-color: #0ea5e9; box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2); }
         .floating { animation: floating 4s ease-in-out infinite; }
@@ -67,25 +74,23 @@
 
     <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-sm py-4 px-6 lg:px-12">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-gradient">Danilo Turques</a>
+            <a href="#" class="text-2xl font-bold wave-text">Danilo Turques</a>
             <div class="hidden md:flex space-x-8">
                 <a href="#inicio" class="text-gray-300 hover:text-primary-400 transition-colors">Início</a>
-                <a href="#servicos" class="text-gray-300 hover:text-primary-400 transition-colors">Serviços</a>
+                <a href="#sobre-mim" class="text-gray-300 hover:text-primary-400 transition-colors">Sobre Mim</a>
+                <a href="#formacao" class="text-gray-300 hover:text-primary-400 transition-colors">Formação</a>
                 <a href="#tecnologias" class="text-gray-300 hover:text-primary-400 transition-colors">Tecnologias</a>
-                <a href="#projetos" class="text-gray-300 hover:text-primary-400 transition-colors">Projetos</a>
-                <a href="#contato" class="text-gray-300 hover:text-primary-400 transition-colors">Contato</a>
             </div>
-            <button id="menu-toggle" class="md:hidden text-gray-300">
+            <button id="menu-toggle" class="md-hidden text-gray-300">
                 <i data-feather="menu"></i>
             </button>
         </div>
         <div id="mobile-menu" class="mobile-menu md:hidden absolute top-full left-0 w-full bg-slate-900/95 backdrop-blur-sm py-4 px-6 transform -translate-y-[150%]">
             <div class="flex flex-col space-y-4">
                 <a href="#inicio" class="text-gray-300 hover:text-primary-400 transition-colors py-2 mobile-link">Início</a>
-                <a href="#servicos" class="text-gray-300 hover:text-primary-400 transition-colors py-2 mobile-link">Serviços</a>
+                <a href="#sobre-mim" class="text-gray-300 hover:text-primary-400 transition-colors py-2 mobile-link">Sobre Mim</a>
+                <a href="#formacao" class="text-gray-300 hover:text-primary-400 transition-colors py-2 mobile-link">Formação</a>
                 <a href="#tecnologias" class="text-gray-300 hover:text-primary-400 transition-colors py-2 mobile-link">Tecnologias</a>
-                <a href="#projetos" class="text-gray-300 hover:text-primary-400 transition-colors py-2 mobile-link">Projetos</a>
-                <a href="#contato" class="text-gray-300 hover:text-primary-400 transition-colors py-2 mobile-link">Contato</a>
             </div>
         </div>
     </nav>
@@ -95,46 +100,117 @@
             <div class="floating mb-8">
                 <img src="https://placehold.co/128x128/0f172a/0ea5e9?text=DT" alt="Danilo Turques" class="w-32 h-32 rounded-full mx-auto border-4 border-primary-500 shadow-lg">
             </div>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">Danilo Turques</h1>
-            <div class="typewriter-container"><h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gradient mb-6 typewriter">Arquiteto de Fluxos Digitais</h2></div>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 wave-text">Danilo Turques de Almeida</h1>
+            <div class="typewriter-container"><h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gradient mb-6 typewriter">Analista de Suporte de TI & Redes</h2></div>
             <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10">
-                Transformo ideias em experiências digitais fluidas e intuitivas, combinando design estratégico com tecnologia de ponta.
+                Profissional de TI com experiência em suporte técnico, diagnóstico e resolução de problemas de hardware, software e redes, buscando sempre garantir a estabilidade e eficiência dos ambientes tecnológicos.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#projetos" class="px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-lg transition-colors shadow-lg">Ver Projetos</a>
-                <a href="#contato" class="px-6 py-3 bg-transparent border border-primary-500 text-primary-400 hover:bg-primary-500 hover:text-white font-medium rounded-lg transition-colors">Entrar em Contato</a>
+                <a href="#tecnologias" class="px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-lg transition-colors shadow-lg">Minhas Skills</a>
+                <a href="https://www.linkedin.com/in/devdanilo-turques-de-almeida" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-transparent border border-primary-500 text-primary-400 hover:bg-primary-500 hover:text-white font-medium rounded-lg transition-colors">Ver LinkedIn</a>
             </div>
         </div>
     </section>
 
-    <section id="servicos" class="py-16 sm:py-20 px-6 bg-slate-900/50 backdrop-blur-sm">
-        <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Serviços</h2>
-            <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12 sm:mb-16">Soluções completas para transformar a sua presença digital.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card-hover bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700">
-                    <div class="w-16 h-16 rounded-full bg-primary-500/20 flex items-center justify-center mb-6"><i data-feather="layout" class="text-primary-400" width="32" height="32"></i></div>
-                    <h3 class="text-xl font-semibold mb-4">Arquitetura Web de Alta Performance</h3>
-                    <p class="text-gray-400">Estruturo e construo sites, e-commerces e sistemas rápidos, bonitos e que convertem.</p>
+    <section id="sobre-mim" class="py-16 sm:py-20 px-6 bg-slate-900/50 backdrop-blur-sm">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Sobre Mim</h2>
+            <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12 sm:mb-16">Minha jornada, minhas habilidades e meus objetivos.</p>
+            <div class="text-left space-y-6 text-gray-300 text-lg">
+                <p>
+                    Desde o início da minha jornada na tecnologia, sou movido pela curiosidade de entender como as coisas funcionam. Essa paixão me levou à área de infraestrutura e redes, onde encontro a satisfação em construir e manter sistemas estáveis e eficientes que realmente fazem a diferença no dia a dia das pessoas e das empresas.
+                </p>
+                <p>
+                    Minha experiência prática de 9 meses em suporte técnico me proporcionou uma base sólida no diagnóstico e resolução de problemas complexos de hardware, software e redes. Aprendi a importância de uma comunicação clara e de um atendimento ágil para garantir a satisfação dos usuários e a continuidade das operações.
+                </p>
+                <p>
+                    Meu objetivo é continuar crescendo como profissional de TI, aprofundando meus conhecimentos em administração de redes, segurança e automação. Busco desafios que me permitam não apenas aplicar o que já sei, mas também aprender novas tecnologias e colaborar com equipes dinâmicas para criar soluções tecnológicas robustas e inovadoras.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="formacao" class="py-16 sm:py-20 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Jornada Profissional</h2>
+            <p class="text-gray-400 text-center max-w-2xl mx-auto mb-16">Minha base de conhecimento e compromisso com a evolução contínua.</p>
+            
+            <div class="relative pl-8">
+                <!-- A linha da timeline -->
+                <div class="absolute left-4 top-2 h-full w-0.5 bg-slate-700"></div>
+                
+                <!-- Item 1: Formação Acadêmica -->
+                <div class="relative mb-12">
+                    <div class="absolute left-4 top-2 -ml-4 w-8 h-8 rounded-full bg-primary-500 border-4 border-slate-900 flex items-center justify-center">
+                        <i data-feather="book-open" class="text-white" width="16" height="16"></i>
+                    </div>
+                    <div class="pl-10">
+                        <h3 class="text-2xl font-semibold text-primary-300 mb-2">Formação Acadêmica</h3>
+                        <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-slate-700 space-y-4">
+                            <div>
+                                <h4 class="font-bold text-lg">Redes de Computadores</h4>
+                                <p class="text-gray-400">UnigranRio | Início: 22/Jun/2025 - Previsão de Conclusão: Jul/2027</p>
+                            </div>
+                            <div class="border-t border-slate-600 pt-4">
+                                <h4 class="font-bold text-lg">Ensino Médio Completo</h4>
+                                <p class="text-gray-400">Escola Leopoldina da Silveira | Concluído em Nov/2021</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-hover bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700">
-                    <div class="w-16 h-16 rounded-full bg-primary-500/20 flex items-center justify-center mb-6"><i data-feather="cpu" class="text-primary-400" width="32" height="32"></i></div>
-                    <h3 class="text-xl font-semibold mb-4">Engenharia de Automação Inteligente</h3>
-                    <p class="text-gray-400">Desenho ecossistemas com n8n para eliminar trabalho manual e otimizar processos.</p>
+
+                <!-- Item 2: Certificações e Cursos -->
+                <div class="relative mb-12">
+                     <div class="absolute left-4 top-2 -ml-4 w-8 h-8 rounded-full bg-secondary-500 border-4 border-slate-900 flex items-center justify-center">
+                        <i data-feather="award" class="text-white" width="16" height="16"></i>
+                    </div>
+                    <div class="pl-10">
+                        <h3 class="text-2xl font-semibold text-secondary-300 mb-2">Certificações e Cursos</h3>
+                         <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-slate-700 space-y-4">
+                            <div>
+                                <h4 class="font-bold text-lg">Conceitos de Rede de Computadores no Azure <span class="text-xs bg-primary-500/20 text-primary-300 py-1 px-2 rounded-full ml-2">Microsoft</span></h4>
+                                <p class="text-gray-400">Fundamentos de networking no ambiente de nuvem do Azure (VNets, DNS, sub-redes).</p>
+                            </div>
+                            <div class="border-t border-slate-600 pt-4">
+                                <h4 class="font-bold text-lg">Hardware Avançado & Manutenção de Computadores</h4>
+                                <p class="text-gray-400">Diagnóstico avançado, troubleshooting de componentes, otimização e montagem.</p>
+                            </div>
+                             <div class="border-t border-slate-600 pt-4">
+                                <h4 class="font-bold text-lg">Inglês Técnico para a Área de TI</h4>
+                                <p class="text-gray-400">Capacitação para leitura e interpretação de documentações técnicas e manuais.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-hover bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700">
-                    <div class="w-16 h-16 rounded-full bg-primary-500/20 flex items-center justify-center mb-6"><i data-feather="pen-tool" class="text-primary-400" width="32" height="32"></i></div>
-                    <h3 class="text-xl font-semibold mb-4">Design de Interfaces (UI/UX)</h3>
-                    <p class="text-gray-400">Crio interfaces intuitivas e atraentes, focadas na melhor experiência para o utilizador.</p>
+
+                <!-- Item 3: Em estudo -->
+                 <div class="relative">
+                     <div class="absolute left-4 top-2 -ml-4 w-8 h-8 rounded-full bg-slate-600 border-4 border-slate-900 flex items-center justify-center">
+                        <i data-feather="activity" class="text-white" width="16" height="16"></i>
+                    </div>
+                    <div class="pl-10">
+                        <h3 class="text-2xl font-semibold text-slate-400 mb-2">Evolução Contínua (Em Estudo)</h3>
+                         <div class="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-slate-700 space-y-4">
+                            <div>
+                                <h4 class="font-bold text-lg">ITIL 4 Foundation</h4>
+                                <p class="text-gray-400">Foco em melhores práticas de gerenciamento de serviços de TI.</p>
+                            </div>
+                            <div class="border-t border-slate-600 pt-4">
+                                <h4 class="font-bold text-lg">CompTIA A+</h4>
+                                <p class="text-gray-400">Validação de habilidades essenciais em hardware, software e troubleshooting.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section id="tecnologias" class="py-16 sm:py-20 px-6">
+    <section id="tecnologias" class="py-16 sm:py-20 px-6 bg-slate-900/50 backdrop-blur-sm">
         <div class="container mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Tecnologias</h2>
-            <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12 sm:mb-16">Ferramentas que utilizo para criar experiências excecionais.</p>
+            <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12 sm:mb-16">Ferramentas que utilizo para garantir ambientes de TI robustos e eficientes.</p>
             <div class="swiper technologies-swiper">
                 <div class="swiper-wrapper items-center">
                     <!-- Tech items will be injected by JS -->
@@ -144,42 +220,7 @@
         </div>
     </section>
 
-    <section id="projetos" class="py-16 sm:py-20 px-6 bg-slate-900/50 backdrop-blur-sm">
-        <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 sm:mb-16">Projetos em Destaque</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop" alt="Projeto 1" class="w-full h-full object-cover">
-                    <div class="project-overlay"><h3 class="text-xl font-bold">Sistema de Automação</h3><p class="text-gray-300">Redução de 80% no tempo de processamento.</p></div>
-                </div>
-                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?q=80&w=2072&auto=format&fit=crop" alt="Projeto 2" class="w-full h-full object-cover">
-                    <div class="project-overlay"><h3 class="text-xl font-bold">E-commerce Premium</h3><p class="text-gray-300">Aumento de 150% nas conversões.</p></div>
-                </div>
-                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" alt="Projeto 3" class="w-full h-full object-cover">
-                    <div class="project-overlay"><h3 class="text-xl font-bold">Dashboard Analytics</h3><p class="text-gray-300">Visualização de dados em tempo real.</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contato" class="py-16 sm:py-20 px-6">
-        <div class="container mx-auto max-w-3xl text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Vamos Conversar?</h2>
-            <p class="text-gray-400 mb-12">Tenho interesse em novos desafios. Envie uma mensagem!</p>
-            <form action="#" method="POST" class="space-y-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <input type="text" name="name" placeholder="O seu nome" class="form-input w-full" required>
-                    <input type="email" name="email" placeholder="O seu e-mail" class="form-input w-full" required>
-                </div>
-                <textarea name="message" rows="5" placeholder="A sua mensagem" class="form-input w-full" required></textarea>
-                <button type="submit" class="px-8 py-3 w-full sm:w-auto bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-lg transition-colors shadow-lg">Enviar Mensagem</button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="py-8 px-6 bg-slate-900/50 backdrop-blur-sm">
+    <footer class="py-8 px-6 bg-slate-900">
         <div class="container mx-auto text-center text-gray-400">
             <div class="flex justify-center space-x-6 mb-4">
                 <a href="https://github.com/Turquez" target="_blank" rel="noopener noreferrer" class="hover:text-primary-400"><i data-feather="github"></i></a>
@@ -229,11 +270,11 @@
 
             // Technologies Data
             const technologies = [
-                { name: 'React', icon: 'react' }, { name: 'JavaScript', icon: 'javascript' },
-                { name: 'TypeScript', icon: 'typescript' }, { name: 'Node.js', icon: 'nodejs' },
-                { name: 'Python', icon: 'python' }, { name: 'HTML5', icon: 'html5' },
-                { name: 'CSS3', icon: 'css3' }, { name: 'TailwindCSS', icon: 'tailwindcss' },
-                { name: 'Figma', icon: 'figma' }, { name: 'Docker', icon: 'docker' }
+                { name: 'Windows Server', icon: 'windows8' }, { name: 'Linux', icon: 'linux' },
+                { name: 'Active Directory', icon: 'microsoftsqlserver' }, { name: 'Python', icon: 'python' },
+                { name: 'Node.js', icon: 'nodejs' }, { name: 'Docker', icon: 'docker' },
+                { name: 'AWS', icon: 'amazonwebservices' }, { name: 'Azure', icon: 'azure' },
+                { name: 'Jira', icon: 'jira' }, { name: 'Git', icon: 'git' }
             ];
 
             const swiperWrapper = document.querySelector('.technologies-swiper .swiper-wrapper');
@@ -241,12 +282,13 @@
                 technologies.forEach(tech => {
                     const slide = document.createElement('div');
                     slide.className = 'swiper-slide';
+                    const iconUrl = `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.icon}/${tech.icon}-original.svg`;
                     slide.innerHTML = `
                         <div class="flex flex-col items-center p-6">
                             <div class="tech-icon w-20 h-20 bg-slate-800 rounded-xl flex items-center justify-center mb-4">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.icon}/${tech.icon}-original.svg" alt="${tech.name}" class="w-12 h-12">
+                                <img src="${iconUrl}" alt="${tech.name}" class="w-12 h-12" onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.icon}/${tech.icon}-plain.svg'">
                             </div>
-                            <span class="text-lg font-medium">${tech.name}</span>
+                            <span class="text-lg font-medium text-center">${tech.name}</span>
                         </div>
                     `;
                     swiperWrapper.appendChild(slide);
